@@ -3,26 +3,46 @@ const fs = require('fs/promises')
 const myFileWriter = async (fileName, fileContent) => {
 	// write code here
 	// dont chnage function name
-	fs.writeFile(fileName,fileContent);
+	fs.writeFile(fileName,fileContent,(err)=>{
+		if(err){
+			console.log(err);
+		}
+		console.log("File Created");
+	});
 }
 
 const myFileReader = async (fileName) => {
 	// write code here
 	// dont chnage function name
-	fs.readFile(fileName);
+	fs.readFile(fileName,(err)=>{
+		if(err){
+			console.log(err);
+		}
+		console.log("File Read");
+	});
 }
 
 
 const myFileUpdater = async (fileName, fileContent) => {
 	// write code here
 	// dont chnage function name
-	fs.appendFile(fileName,fileContent);
+	fs.appendFile(fileName,fileContent,(err)=>{
+		if(err){
+			console.log(err);
+		}
+		console.log("File Appended");
+	});
 }
 
 const myFileDeleter = async (fileName) => {
 	// write code here
 	// dont chnage function name
-	fs.unlink();
+	fs.unlink(fileName,(err)=>{
+		if(err){
+			console.log(err);
+		}
+		console.log("File Deleted");
+	});
 }
 
 
