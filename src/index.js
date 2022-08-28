@@ -18,7 +18,7 @@ const myFileReader = async (fileName) => {
 		if(err){
 			console.log(err);
 		}
-		console.log("File Read");
+		console.log(data);
 	});
 }
 
