@@ -15,12 +15,14 @@ const myFileWriter = async (fileName, fileContent) => {
 const myFileReader = async (fileName) => {
 	// write code here
 	// dont chnage function name
+	const mydata = await
 	fs.readFile(fileName,'utf-8',(err,data)=>{
 		if(err){
 			console.log(err);
 		}
-		// console.log(data);
-		console.log("File Readed");
+		else console.log(data);
+		// console.log("File Readed");
+		return mydata;
 	});
 }
 
