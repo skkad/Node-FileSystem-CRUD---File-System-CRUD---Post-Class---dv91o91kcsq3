@@ -1,3 +1,4 @@
+const { log } = require('console');
 const fs = require('fs/promises')
 
 const myFileWriter = async (fileName, fileContent) => {
@@ -14,11 +15,12 @@ const myFileWriter = async (fileName, fileContent) => {
 const myFileReader = async (fileName) => {
 	// write code here
 	// dont chnage function name
-	fs.readFile(fileName,(err,data)=>{
+	fs.readFile(fileName,'utf-8',(err,data)=>{
 		if(err){
 			console.log(err);
 		}
-		console.log(data.toString());
+		// console.log(data);
+		console.log("File Readed");
 	});
 }
 
